@@ -18,21 +18,20 @@ The result is a fully automated EC2 instance that is configured and ready to use
 ---
 
 ## 🧱 Project Structure
-```text
-terraform/
-├── main.tf
-├── provider.tf
-├── variables.tf
-├── terraform.tfvars
-├── cloud-init.yml
-├── terraform.tfstate
-├── terraform.tfstate.backup
-├── README.md
-└── modules/
-    └── ec2/
-        ├── main.tf
-        ├── variables.tf
-        └── outputs.tf
+- terraform/
+  - main.tf
+  - provider.tf
+  - variables.tf
+  - terraform.tfvars
+  - cloud-init.yml
+  - terraform.tfstate
+  - terraform.tfstate.backup
+  - README.md
+  - modules/
+    - ec2/
+      - main.tf
+      - variables.tf
+      - outputs.tf
 ---
 
 ## ⚙️ What This Project Does
