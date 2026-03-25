@@ -1,19 +1,23 @@
-🚀 Terraform Project – AWS EC2 Deployment with Cloud-Init
+# 🚀 Terraform Project – AWS EC2 Deployment with Cloud-Init
 
-This project demonstrates how to use Terraform to provision and configure AWS infrastructure using Infrastructure as Code (IaC) principles.
+This project demonstrates how to use **Terraform** to provision and configure **AWS** infrastructure using **Infrastructure as Code (IaC)** principles.
 
-📌 Project Overview
+---
+
+## 📌 Project Overview
 
 In this project, I built an automated EC2 deployment using:
 
-Terraform for infrastructure provisioning
-AWS as the cloud provider
-Cloud-init for instance configuration at boot
-Modules to structure reusable infrastructure code
+- **Terraform** for infrastructure provisioning  
+- **AWS** as the cloud provider  
+- **Cloud-init** for instance configuration at boot  
+- **Modules** to structure reusable infrastructure code  
 
 The result is a fully automated EC2 instance that is configured and ready to use immediately after launch.
 
-🧱 Project Structure
+---
+
+## 🧱 Project Structure
 terraform/
 │
 ├── main.tf
@@ -26,107 +30,113 @@ terraform/
 ├── README.md
 │
 └── modules/
-    └── ec2/
-        ├── main.tf
-        ├── variables.tf
-        └── outputs.tf
-⚙️ What This Project Does
-Provisions an EC2 instance on AWS
-Uses a custom module (modules/ec2)
-Passes configuration using variables
-Automates setup using cloud-init
-Outputs useful deployment information
-🧩 Terraform Components
-🔹 Provider
+└── ec2/
+├── main.tf
+├── variables.tf
+└── outputs.tf
 
-Defined in provider.tf:
 
-Configures AWS provider
-Sets region and authentication
-🔹 Main Configuration
+---
 
-Defined in main.tf:
+## ⚙️ What This Project Does
 
-Calls the EC2 module
-Passes required variables
-Links cloud-init configuration
-🔹 Variables
+- Provisions an **EC2 instance** on AWS  
+- Uses a custom **module** (`modules/ec2`)  
+- Passes configuration using **variables**  
+- Automates setup using **cloud-init**  
+- Outputs useful deployment information  
 
-Defined in:
+---
 
-variables.tf
-terraform.tfvars
+## 🧩 Terraform Components
 
-Used to:
+### 🔹 Provider (`provider.tf`)
+- Configures AWS provider  
+- Sets region and authentication  
 
-Customize instance type
-Set AMI ID
-Configure environment-specific values
-🔹 Module (modules/ec2)
+### 🔹 Main Configuration (`main.tf`)
+- Calls the EC2 module  
+- Passes required variables  
+- Links cloud-init configuration  
 
-Encapsulates EC2 logic:
+### 🔹 Variables (`variables.tf` & `terraform.tfvars`)
+Used to:  
+- Customize instance type  
+- Set AMI ID  
+- Configure environment-specific values  
 
-EC2 resource definition
-Security group configuration
-Outputs (e.g. public IP)
+### 🔹 Module (`modules/ec2`)
+Encapsulates EC2 logic:  
+- EC2 resource definition  
+- Security group configuration  
+- Outputs (e.g., public IP)  
 
-This improves:
+**Benefits:** Reusability, maintainability, scalability  
 
-Reusability
-Maintainability
-Scalability
-🔹 Cloud-Init
+### 🔹 Cloud-Init (`cloud-init.yml`)
+Used to:  
+- Install software (NGINX/Apache)  
+- Configure services automatically  
+- Run commands on instance boot  
 
-Defined in cloud-init.yml:
+**Benefits:**  
+- No manual configuration required  
+- Fully automated deployments  
 
-Used to:
+---
 
-Install software (e.g. NGINX/Apache)
-Configure services automatically
-Run commands on instance boot
+## 🚀 How to Run the Project
 
-This ensures:
-
-No manual configuration required
-Fully automated deployments
-🚀 How to Run the Project
-1. Initialize Terraform
+```bash
+# Initialize Terraform
 terraform init
-2. Preview changes
+
+# Preview changes
 terraform plan
-3. Apply configuration
+
+# Apply configuration
 terraform apply
-🧹 Destroy Resources (Important)
+
+-🧹 Destroy Resources (Important)
 terraform destroy
-📤 Outputs
+
+## 📤 Outputs
 
 After deployment, Terraform provides:
 
 EC2 Public IP
 Instance details
 
-You can use the IP to access your server via:
+Access your server via:
 
 http://<public-ip>
-💡 Key Concepts Demonstrated
-Infrastructure as Code (IaC)
-Terraform modules
-AWS EC2 provisioning
-Cloud-init automation
-Variable-driven configuration
-State management
-🧠 What I Learned
+
+--
+
+## 💡 Key Concepts Demonstrated
+--Infrastructure as Code (IaC)
+--Terraform modules
+--AWS EC2 provisioning
+--Cloud-init automation
+--Variable-driven configuration
+--State management
+
+--
+
+##🧠 What I Learned
+
 How to structure Terraform projects using modules
 How to automate infrastructure deployment
 How cloud-init eliminates manual setup
 How to debug Terraform errors effectively
 The importance of reusable infrastructure code
-⚠️ Challenges & Solutions
+
+##⚠️ Challenges & Solutions
 Challenge	Solution
-EC2 not configuring correctly	Fixed cloud-init syntax
-Incorrect permissions	Adjusted AWS security groups
-Terraform errors	Used terraform validate and logs
-Module issues	Ensured correct variable passing
+--EC2 not configuring correctly	Fixed cloud-init syntax
+--Incorrect permissions	Adjusted AWS security groups
+--Terraform errors	Used terraform validate and logs
+--Module issues	Ensured correct variable passing
 📸 Screenshots
 
 (Add screenshots here)
@@ -142,4 +152,3 @@ Integrate with CI/CD pipeline
 👤 Author
 
 Abdi Shakur
-Aspiring DevOps Engineer 🚀
