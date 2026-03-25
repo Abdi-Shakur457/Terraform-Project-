@@ -18,6 +18,9 @@ The result is a fully automated EC2 instance that is configured and ready to use
 ---
 
 ## 🧱 Project Structure
+
+---
+
 terraform/
 │
 ├── main.tf
