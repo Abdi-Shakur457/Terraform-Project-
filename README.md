@@ -135,12 +135,34 @@ Challenge	Solution
 --Module issues	Ensured correct variable passing
 📸 Screenshots
 
-(Add screenshots here)
+# terraform plan command showing 2 added resources as expected :
 
-EC2 instance running in AWS
-Application accessible via browser
-Successful Terraform apply output
-🔮 Future Improvements
+
+<img width="557" height="431" alt="terraform plan ss" src="https://github.com/user-attachments/assets/4def4c4d-96a6-4d20-8dfd-4bda70abefb8" />
+
+
+# terraform apply successfully applied resoruces :
+
+
+<img width="490" height="278" alt="t apply" src="https://github.com/user-attachments/assets/ebcbef06-8695-4501-a88b-56f5a094a7f8" />
+
+
+# working wordpress server
+
+
+<img width="956" height="508" alt="wp" src="https://github.com/user-attachments/assets/3365c9cb-7a64-4367-b542-90aeef20584f" />
+
+
+# EC2 instance running in AWS
+
+
+<img width="606" height="191" alt="ii" src="https://github.com/user-attachments/assets/f06a3ca0-7802-476f-b3c0-19f95acce71f" />
+
+
+
+
+##🔮 Future Improvements
+
 Add multiple environments (dev/staging/prod)
 Use remote backend (S3 + DynamoDB)
 Add load balancer
