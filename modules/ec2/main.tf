@@ -2,7 +2,8 @@
 resource "aws_instance" "Wordpress_server" {
   ami           = local.instance_ami
   instance_type = var.instance_type
-  security_groups = [aws_security_group.TF_SG.id] ## Attaching the SG I've created to the Instance
+  key_name      = "ubuntu-abdi"   # Attached key pair here
+  vpc_security_group_ids = [aws_security_group.TF_SG.id] ## Attaching the SG I've created to the Instance
 
   tags = {
     Name = "Wordpress_server"
@@ -18,15 +19,6 @@ resource "aws_security_group" "TF_SG" {
   vpc_id      = var.security_group_vpc_id
 
   ingress {
-    description      = "Allowing HTTPS Access"
-    from_port        = 443
-    to_port          = 443
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
-  }
-
-  ingress {
     description      = "Allowing HTTP access"
     from_port        = 80
     to_port          = 80
@@ -34,7 +26,14 @@ resource "aws_security_group" "TF_SG" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
+ingress {
+    description      = "Allowing SSH access"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
   egress {
     from_port        = 0
     to_port          = 0
@@ -43,7 +42,4 @@ resource "aws_security_group" "TF_SG" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-  tags = {
-    Name = "TF_SG"
-  }
-}
+ } 

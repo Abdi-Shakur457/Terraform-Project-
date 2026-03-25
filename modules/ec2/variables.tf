@@ -9,7 +9,7 @@ variable "security_group_vpc_id" {
 }
 
 locals {
-  instance_ami = "ami-018ff7ece22bf96db"
+  instance_ami = "ami-09dbc7ce74870d573"
 }
 
 
