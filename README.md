@@ -81,22 +81,19 @@ Used to:
 
 ---
 
-## 🚀 How to Run the Project
+# 🚀 How to Run the Project
 
+### Initialize Terraform
 ```bash
-# Initialize Terraform
 terraform init
 
-# Preview changes
+Preview changes
 terraform plan
-
-# Apply configuration
+Apply configuration
 terraform apply
-
--🧹 Destroy Resources (Important)
+🧹 Destroy Resources (Important)
 terraform destroy
-
-## 📤 Outputs
+📤 Outputs
 
 After deployment, Terraform provides:
 
@@ -107,32 +104,42 @@ Access your server via:
 
 http://<public-ip>
 
---
-
-## 💡 Key Concepts Demonstrated
---Infrastructure as Code (IaC)
---Terraform modules
---AWS EC2 provisioning
---Cloud-init automation
---Variable-driven configuration
---State management
-
---
-
-##🧠 What I Learned
-
+💡 Key Concepts Demonstrated
+Infrastructure as Code (IaC)
+Terraform modules
+AWS EC2 provisioning
+Cloud-init automation
+Variable-driven configuration
+State management
+🧠 What I Learned
 How to structure Terraform projects using modules
 How to automate infrastructure deployment
 How cloud-init eliminates manual setup
 How to debug Terraform errors effectively
 The importance of reusable infrastructure code
-
-##⚠️ Challenges & Solutions
+⚠️ Challenges & Solutions
 Challenge	Solution
---EC2 not configuring correctly	Fixed cloud-init syntax
---Incorrect permissions	Adjusted AWS security groups
---Terraform errors	Used terraform validate and logs
---Module issues	Ensured correct variable passing
+EC2 not configuring correctly	Fixed cloud-init syntax
+Incorrect permissions	Adjusted AWS security groups
+Terraform errors	Used terraform validate and logs
+Module issues	Ensured correct variable passing
+📸 Screenshots
+Terraform plan showing 2 added resources
+
+Terraform apply successfully applied resources
+
+Working WordPress server
+
+EC2 instance running in AWS
+
+🔮 Future Improvements
+Add multiple environments (dev/staging/prod)
+Use remote backend (S3 + DynamoDB)
+Add load balancer
+Integrate with CI/CD pipeline
+👤 Author
+
+Abdi Shakur
 📸 Screenshots
 
 # terraform plan command showing 2 added resources as expected :
