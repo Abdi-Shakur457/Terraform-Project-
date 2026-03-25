@@ -132,7 +132,7 @@ Working WordPress server:
 
 
 EC2 instance running in AWS:
-![ec2 instance]
+
 
 
 <img width="606" height="191" alt="ii" src="https://github.com/user-attachments/assets/f06a3ca0-7802-476f-b3c0-19f95acce71f" />
